@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DevArc - We Build What Brands Dream
 
-## Getting Started
+A modern, responsive website built with Next.js, TypeScript, and Tailwind CSS for DevArc - a creative digital agency.
 
-First, run the development server:
+## 🚀 Features
 
+- **Modern Design**: Clean, premium Indian-inspired design with purple (#5B3DE6) color scheme
+- **Fully Responsive**: Optimized for all devices (mobile, tablet, desktop)
+- **Smooth Animations**: Framer Motion animations throughout the site
+- **Interactive Components**: Hover effects, transitions, and micro-interactions
+- **SEO Optimized**: Proper meta tags and semantic HTML structure
+- **Performance**: Fast loading with Next.js optimization
+
+## 🎨 Design System
+
+- **Fonts**: Poppins (primary), Inter (secondary)
+- **Colors**: 
+  - Primary: #5B3DE6 (Purple)
+  - White: #FFFFFF
+  - Deep Gray: #1E1E1E
+- **Layout**: Full-width sections with curved dividers
+- **Animations**: Fade-in, slide-up, and hover effects
+
+## 📱 Sections
+
+1. **Hero Section**: Eye-catching headline with CTAs
+2. **About Us**: Team focus with feature highlights
+3. **Services**: 5 service cards with detailed descriptions
+4. **Process**: 4-step workflow visualization
+5. **Work**: Portfolio showcase (MVP stage)
+6. **Contact**: Multiple contact methods and form
+7. **Footer**: Links and company information
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Fonts**: Google Fonts (Poppins, Inter)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd devarc-website
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Start the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── globals.css          # Global styles and CSS variables
+│   ├── layout.tsx           # Root layout with metadata
+│   └── page.tsx            # Main page component
+├── components/
+│   ├── Header.tsx          # Navigation header
+│   ├── Hero.tsx            # Hero section
+│   ├── About.tsx           # About us section
+│   ├── Services.tsx        # Services showcase
+│   ├── Process.tsx         # Work process
+│   ├── Work.tsx            # Portfolio section
+│   ├── Contact.tsx         # Contact form and info
+│   └── Footer.tsx          # Footer component
+└── ...
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎯 Key Features Implemented
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- ✅ Responsive navigation with mobile menu
+- ✅ Hero section with animated elements
+- ✅ About section with team focus
+- ✅ Services grid with hover effects
+- ✅ Process timeline with visual steps
+- ✅ Work showcase (MVP stage)
+- ✅ Contact form with validation
+- ✅ Footer with social links
+- ✅ Smooth scrolling and animations
+- ✅ SEO optimization
+- ✅ Performance optimization
 
-## Deploy on Vercel
+## 🎨 Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Colors
+Update colors in `tailwind.config.ts`:
+```typescript
+colors: {
+  primary: {
+    DEFAULT: "#5B3DE6",
+    // ... other shades
+  }
+}
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Content
+All content is easily customizable in the respective component files.
+
+### Animations
+Animations can be adjusted in the Framer Motion components or CSS animations in `globals.css`.
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px  
+- **Desktop**: > 1024px
+
+## 🚀 Deployment
+
+The site is ready for deployment on platforms like:
+- Vercel (recommended for Next.js)
+- Netlify
+- AWS Amplify
+- Any static hosting service
+
+## 📄 License
+
+This project is created for DevArc digital agency.
+
+## 🤝 Contributing
+
+This is a client project. For any modifications, please contact the DevArc team.
+
+---
+
+**Built with ❤️ by DevArc Team**
