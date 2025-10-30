@@ -20,13 +20,12 @@ const Pricing = () => {
   const plans = [
     {
       id: 'free-trial',
-      icon: Target,              
+      icon: Target,
       title: "6-Day Free Trial",
-      subtitle: "Perfect for new brands or businesses exploring our services.",                                 
+      subtitle: "Perfect for new brands or businesses exploring our services.",
       features: [
         "10 Custom Brand Assets (Posts, Reels & Visuals)",
         "A Sample Website Design (Homepage + Layout Preview)",
-        
         "Brand Review & Creative Direction Call",
         "Full Support during Trial"
       ],
@@ -37,7 +36,7 @@ const Pricing = () => {
       gradient: "from-primary to-primary-400",
       bgColor: "bg-gradient-to-br from-primary-50 to-primary-100",
       borderColor: "border-primary-200",
-      textColor: "text-gray-900",
+      textColor: "text-primary",
       status: null
     },
     {
@@ -147,16 +146,18 @@ const Pricing = () => {
                   </p>
 
                   {/* Features for Free Trial */}
-                  {plan.id === 'free-trial' && (
-                    <div className="space-y-3 mb-6">
-                      {plan.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-start space-x-3">
-                          <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700 text-sm leading-relaxed">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                {/* Features for Free Trial */}
+{plan.id === 'free-trial' && Array.isArray(plan.features) && (
+  <div className="space-y-3 mb-6">
+    {plan.features.map((feature, featureIndex) => (
+      <div key={featureIndex} className="flex items-start space-x-3">
+        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+        <span className="text-gray-700 text-sm leading-relaxed">{feature}</span>
+      </div>
+    ))}
+  </div>
+)}
+
 
                   {/* Description for other plans */}
                   {plan.description && (
@@ -165,7 +166,7 @@ const Pricing = () => {
                     </p>
                   )}
 
-                  <p className={`font-semibold ${plan.textColor} mb-6`}>      
+                  <p className={`font-semibold ${plan.textColor} mb-6`}>
                     {plan.bottomLine}
                   </p>
                 </div>
@@ -212,8 +213,7 @@ const Pricing = () => {
             <p className="text-gray-600 mb-6">
               Contact us today — we'll guide you personally.
             </p>
-            <motion.a
-              href="#contact"
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 gradient-bg text-white rounded-full font-semibold text-lg flex items-center space-x-2 mx-auto shadow-lg hover:shadow-xl transition-all"
@@ -221,7 +221,7 @@ const Pricing = () => {
               <MessageCircle className="w-5 h-5" />
               <span>Contact us today</span>
               <ArrowRight className="w-5 h-5" />
-            </motion.a>
+            </motion.button>
           </div>
         </motion.div>
       </div>
@@ -230,4 +230,3 @@ const Pricing = () => {
 };
 
 export default Pricing;
-
